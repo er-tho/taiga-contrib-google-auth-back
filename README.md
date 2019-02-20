@@ -9,16 +9,16 @@ Installation
 
 #### Taiga Back
 
-In your Taiga back python virtualenv install the pip package `taiga-contrib-google-auth` with:
+In your Taiga back python virtualenv install the pip package `taiga-contrib-google-auth-x` with:
 
 ```bash
-  pip install taiga-contrib-google-auth
+   pip install git+https://github.com/er-tho/taiga-contrib-google-auth-x --user
 ```
 
 Modify your `settings/local.py` and include the line:
 
 ```python
-    INSTALLED_APPS += ["taiga_contrib_google_auth"]
+    INSTALLED_APPS += ["taiga_contrib_google_auth_x"]
 
     # Get these from https://console.cloud.google.com/apis/credentials
 
@@ -31,7 +31,7 @@ Modify your `settings/local.py` and include the line:
 
 #### Taiga Front
 
-Download in your `dist/plugins/` directory of Taiga front the `taiga-contrib-google-auth` compiled code:
+Download in your `dist/plugins/` directory of Taiga front the `taiga-contrib-google-auth-x` compiled code:
 
 ```bash
   cd dist/
@@ -59,7 +59,7 @@ Include in your `dist/conf.json` in the 'contribPlugins' list the value `"/plugi
 Clone the repo and
 
 ```bash
-  cd taiga-contrib-google-auth/back
+  cd taiga-contrib-google-auth-x
   workon taiga
   pip install -e .
 ```
@@ -67,7 +67,7 @@ Clone the repo and
 Modify `taiga-back/settings/local.py` and include the line:
 
 ```python
-    INSTALLED_APPS += ["taiga_contrib_google_auth"]
+    INSTALLED_APPS += ["taiga_contrib_google_auth_x"]
 
     # Get these from https://console.cloud.google.com/apis/credentials
 
@@ -86,7 +86,7 @@ After clone the repo link `dist` in `taiga-front` plugins directory:
   cd taiga-front/dist
   mkdir -p plugins
   cd plugins
-  ln -s ../../../taiga-contrib-google-auth/front/dist google-auth
+  ln -s ../../../taiga-contrib-google-auth-x/front/dist google-auth
 ```
 
 Include in your `dist/conf.json` in the 'contribPlugins' list the value `"/plugins/google-auth/google-auth.json"`:
@@ -101,7 +101,7 @@ Include in your `dist/conf.json` in the 'contribPlugins' list the value `"/plugi
 ...
 ```
 
-In the plugin source dir `taiga-contrib-google-auth/front` run
+In the plugin source dir `taiga-contrib-google-auth-x/front` run
 
 ```bash
 npm install
