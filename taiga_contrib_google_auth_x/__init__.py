@@ -1,4 +1,5 @@
 # coding: utf-8
+# Copyright (C) 2019 erTho <ertho@bitconseil.fr>
 # Copyright (C) 2018 Don Bowman <db@donbowman.ca>
 # Copyright (C) 2014-2016 Andrey Antukh <niwi@niwi.nz>
 # Copyright (C) 2014-2016 Jesús Espino <jespinog@gmail.com>
@@ -19,4 +20,4 @@
 
 __version__ = (1, 0, 0)
 
-default_app_config = "taiga_contrib_google_auth.apps.TaigaContribGoogleAuthAppConfig"
+default_app_config = "taiga_contrib_google_auth_x.apps.TaigaContribGoogleAuthXAppConfig"

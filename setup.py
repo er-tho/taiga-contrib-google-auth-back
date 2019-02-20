@@ -5,14 +5,14 @@ import versiontools_support
 from setuptools import setup, find_packages
 
 setup(
-    name = 'taiga-contrib-google-auth',
-    version = ":versiontools:taiga_contrib_google_auth:",
+    name = 'taiga-contrib-google-auth-x',
+    version = ":versiontools:taiga_contrib_google_auth_x:",
     description = "The Taiga plugin for google authentication",
     long_description = "",
     keywords = 'taiga, google, auth, plugin',
-    author = 'Don Bowman',
-    author_email = 'db@donbowman.ca',
-    url = 'https://github.com/donbowman/taiga-contrib-google-auth',
+    author = 'erTho',
+    author_email = 'ertho@bitconseil.fr',
+    url = 'https://github.com/er-tho/taiga-contrib-google-auth-x',
     license = 'AGPL',
     include_package_data = True,
     packages = find_packages(),

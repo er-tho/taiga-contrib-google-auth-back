@@ -1,3 +1,5 @@
+# coding: utf-8
+# Copyright (C) 2019 erTho <ertho@bitconseil.fr>
 # Copyright (C) 2018 Don Bowman <db@donbowman.ca>
 # Copyright (C) 2014-2016 Andrey Antukh <niwi@niwi.nz>
 # Copyright (C) 2014-2016 Jesús Espino <jespinog@gmail.com>
@@ -19,9 +21,9 @@
 from django.apps import AppConfig
 
 
-class TaigaContribGoogleAuthAppConfig(AppConfig):
-    name = "taiga_contrib_google_auth"
-    verbose_name = "Taiga contrib google auth App Config"
+class TaigaContribGoogleAuthXAppConfig(AppConfig):
+    name = "taiga_contrib_google_auth_x"
+    verbose_name = "Taiga contrib google auth x App Config"
 
     def ready(self):
         from taiga.auth.services import register_auth_plugin
