@@ -12,7 +12,7 @@ Installation
 In your Taiga back python virtualenv install the pip package `taiga-contrib-google-auth-x` with:
 
 ```bash
-   pip install git+https://github.com/er-tho/taiga-contrib-google-auth-x
+   pip install git+https://github.com/er-tho/taiga-contrib-google-auth-x.git@master#egg=taiga-contrib-google-auth-x&subdirectory=back
 ```
 
 Modify your `settings/local.py` and include the following lines:
