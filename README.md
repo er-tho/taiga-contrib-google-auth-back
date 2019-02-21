@@ -12,26 +12,26 @@ Installation
 In your Taiga back python virtualenv install the pip package `taiga-contrib-google-auth-x` with:
 
 ```bash
-   pip install git+https://github.com/er-tho/taiga-contrib-google-auth-x --user
+   pip install git+https://github.com/er-tho/taiga-contrib-google-auth-x
 ```
 
-Modify your `settings/local.py` and include the line:
+Modify your `settings/local.py` and include the following lines:
 
 ```python
     INSTALLED_APPS += ["taiga_contrib_google_auth_x"]
 
     # Get these from https://console.cloud.google.com/apis/credentials
 
-    GOOGLE_API_CLIENT_ID = env("GOOGLE_API_CLIENT_ID")
-    GOOGLE_API_CLIENT_SECRET = env("GOOGLE_API_CLIENT_SECRET")
-    GOOGLE_API_REDIRECT_URI = env("GOOGLE_API_REDIRECT_URI")
-    GOOGLE_RESTRICT_LOGIN = [env("GOOGLE_RESTRICT_LOGIN")]
-    GOOGLE_API_ALLOW_DOMAIN = [env("GOOGLE_API_ALLOW_DOMAIN")]
+    GOOGLE_API_CLIENT_ID = "YOUR_GOOGLE_API_CLIENT_ID"
+    GOOGLE_API_CLIENT_SECRET = "YOUR_GOOGLE_API_CLIENT_SECRET"
+    GOOGLE_API_REDIRECT_URI = "YOUR_GOOGLE_API_REDIRECT_URI"
+    GOOGLE_RESTRICT_LOGIN = ["YOUR_DOMAIN_1","YOUR_DOMAIN_2"]
 ```
+You can ommit `GOOGLE_RESTRICT_LOGIN` if unnecessary.
 
 #### Taiga Front
 
-Download in your `dist/plugins/` directory of Taiga front the `taiga-contrib-google-auth-x` compiled code:
+Download in your `dist/plugins/` directory of Taiga front the content of `taiga-contrib-google-auth-x/front/dist`:
 
 ```bash
   cd dist/
@@ -64,18 +64,17 @@ Clone the repo and
   pip install -e .
 ```
 
-Modify `taiga-back/settings/local.py` and include the line:
+Modify `taiga-back/settings/local.py` and include the lines:
 
 ```python
     INSTALLED_APPS += ["taiga_contrib_google_auth_x"]
 
     # Get these from https://console.cloud.google.com/apis/credentials
 
-    GOOGLE_API_CLIENT_ID = env("GOOGLE_API_CLIENT_ID")
-    GOOGLE_API_CLIENT_SECRET = env("GOOGLE_API_CLIENT_SECRET")
-    GOOGLE_API_REDIRECT_URI = env("GOOGLE_API_REDIRECT_URI")
-    GOOGLE_RESTRICT_LOGIN = [env("GOOGLE_RESTRICT_LOGIN")]
-    GOOGLE_API_ALLOW_DOMAIN = [env("GOOGLE_API_ALLOW_DOMAIN")]
+    GOOGLE_API_CLIENT_ID = "YOUR_GOOGLE_API_CLIENT_ID"
+    GOOGLE_API_CLIENT_SECRET = "YOUR_GOOGLE_API_CLIENT_SECRET"
+    GOOGLE_API_REDIRECT_URI = "YOUR_GOOGLE_API_REDIRECT_URI"
+    GOOGLE_RESTRICT_LOGIN = ["YOUR_DOMAIN_1","YOUR_DOMAIN_2"]
 ```
 
 #### Taiga Front
